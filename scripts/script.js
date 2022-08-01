@@ -1,7 +1,7 @@
 let tasks = [];
 
 // Get Time and date in the required format  27/07/2022 @ 9:38 pm
-let getDateAndTime = () => {
+const getDateAndTime = () => {
   let date = new Date();
   let dd = date.getDate();
   let mm = date.getMonth() + 1;
@@ -24,14 +24,14 @@ let getDateAndTime = () => {
   );
 };
 
-let getTasks = () => {
+const getTasks = () => {
   data = localStorage.getItem("tasks");
   if (data !== null) tasks = JSON.parse(data);
   return tasks;
 };
 
 // Add New Tasks
-let addTasks = () => {
+const addTasks = () => {
   tasks = getTasks();
   let time = getDateAndTime();
   tasks.push({
@@ -47,7 +47,7 @@ let addTasks = () => {
 };
 
 // Edit selected Task
-let editTask = (objID) => {
+const editTask = (objID) => {
   let titleInput = document.getElementById("title-value" + objID);
   for (let i = 0; i < tasks.length; i++) {
     if (tasks[i].id == objID) {
@@ -61,7 +61,7 @@ let editTask = (objID) => {
   titleInput.style.border = "none";
 };
 // Mark selected Task as complete and disable edit and check on that Task
-let markTaskAsDone = (objID) => {
+const markTaskAsDone = (objID) => {
   for (let i = 0; i < tasks.length; i++) {
     if (tasks[i].id == objID) {
       tasks[i].completed = true;
@@ -74,7 +74,7 @@ let markTaskAsDone = (objID) => {
 };
 
 // Delete selected Task
-let deleteTask = (objID) => {
+const deleteTask = (objID) => {
   tasks = getTasks();
   tasks = tasks.filter((x) => x.id != objID);
   localStorage.clear();
@@ -83,14 +83,14 @@ let deleteTask = (objID) => {
 };
 
 // Enable edit box of selected Task
-let enableEdit = (objID) => {
+const enableEdit = (objID) => {
   let titleInput = document.getElementById("title-value" + objID);
   titleInput.style.border = "1px solid grey";
   titleInput.disabled = false;
 };
 
 // DisplayTasks
-let displayTasks = () => {
+const displayTasks = () => {
   tasks = getTasks();
   let hr = document.querySelector("hr");
   hr.classList.remove("hidden");
