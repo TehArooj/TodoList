@@ -6,4 +6,117 @@ html {
   margin: 0;
   padding: 0;
   height: 100%;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 0;
+  height: 100%;
+  text-align: center;
+}
+body h2 {
+  font-size: 20px;
+}
+body .navbar {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  padding-left: 20px;
+  height: 60px;
+  align-items: center;
+  background-color: #1d5a5d;
+  color: white;
+}
+body .navbar ul {
+  list-style: none;
+  align-items: center;
+  display: inline-flex;
+  flex-direction: row;
+}
+body .navbar ul li {
+  padding-right: 20px;
+}
+body .add-task-container {
+  width: 50%;
+  display: inline-block;
+  border: none;
+  justify-content: center;
+  padding: 30px 0px;
+}
+body input {
+  width: 85%;
+  box-sizing: border-box;
+  border: 1px solid #1d5a5d;
+  border-radius: 6px;
+}
+body button {
+  background-color: white;
+  color: #1d5a5d;
+  border-color: #1d5a5d;
+}
+body button:hover {
+  background-color: #1d5a5d;
+  color: white;
+}
+body .hidden {
+  display: none;
+}
+body hr {
+  width: 50%;
+  border-color: #1d5a5d;
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+body .list-item-container {
+  display: inline-block;
+  justify-content: center;
+  width: 50%;
+}
+body .todo-list-item {
+  display: flex;
+  border-top: 1px solid #1d5a5d;
+  border-right: 1px solid #1d5a5d;
+  border-left: 1px solid #1d5a5d;
+  flex-direction: column;
+  padding: 10px;
+}
+body .todo-list-item:last-child {
+  border-bottom: 1px solid #1d5a5d;
+}
+body .title-and-time {
+  display: flex;
+  justify-content: space-between;
+}
+body .task-title {
+  display: flex;
+}
+body .title-value {
+  border: 0;
+  margin-left: 10px;
+  background-color: transparent;
+  color: black;
+}
+body .fa-stream {
+  color: #1d5a5d;
+}
+body .todo-list-item p {
+  margin: 0 0 0 20px;
+}
+body .task-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+body .action-icon {
+  padding: 5px;
+  border: 1px solid #1d5a5d;
+  margin: 20px 0px 0px 10px;
+  color: #1d5a5d;
+}
+body .overlay {
+  background-color: grey;
+  opacity: 0.7;
+}
+body .overlay .action-icon {
+  background-color: transparent;
+  opacity: 0.7;
 }/*# sourceMappingURL=styles.css.map */
