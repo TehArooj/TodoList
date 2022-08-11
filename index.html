@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <script
+      src="https://kit.fontawesome.com/bda359b09a.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Todo List</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <h2>TODO LIST</h2>
+      <ul class="nav-links">
+        <li>Home</li>
+        <li>About</li>
+      </ul>
+    </nav>
+    <form onsubmit="event.preventDefault() " class="add-task-container">
+      <input type="text" id="task" required />
+      <button type="submit" onclick="addTasks()">
+        <i class="fa-solid fa-plus"></i> Add Task
+      </button>
+    </form>
+    <hr class="line hidden" />
+    <div id="box"></div>
+
+    <script type="text/javascript" src="/scripts/script.js"></script>
+  </body>
+</html>
